@@ -1,3 +1,8 @@
+/**l
+ * @author Myhail
+ * Test comment
+ */
+
 public class Multiply {
     static public int multiply(int firstNumber, int secondNumber) {
         return firstNumber * secondNumber;

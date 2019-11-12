@@ -1,27 +1,27 @@
 import java.util.Random;
 
 /*
-Основной класс калькулятора в котором вызываются все методы вычислений с других классов
+General class Calculation. This class is used to display the result of mathematical operations.
  */
 
 /**
  * @author Myhail
- * Генерация комментария в HTML 5
+ * Generate code in HTML 5
  */
 
 public class Calculator {
     public static void calculator() {
-        Random randomNumber = new Random(); //создания класса типа рендом
-        int randomNumberOne = randomNumber.nextInt(100); // присвоения переменной случайного значения от 0 до 99
-        int randomNumberTwo = randomNumber.nextInt(10); // присвоения переменной случайного значения от 0 до 9
-        System.out.println("Сумма чисел " + Plus.plus(randomNumberOne, randomNumberTwo));
-        System.out.println("Разница чисел " + Minus.minus(randomNumberOne, randomNumberTwo));
-        if (randomNumberTwo == 0) { // решил добавить проверку так как на 0 делить нельзя
-            System.out.println("Частное посчитать нельзя так делимое 0");
+        Random randomNumber = new Random(); //Create class random type
+        int randomNumberOne = randomNumber.nextInt(100); // Create variable from 0 to 99
+        int randomNumberTwo = randomNumber.nextInt(10); // Create variable from 0 to 9
+        System.out.println("Sum of numbers " + Plus.plus(randomNumberOne, randomNumberTwo));
+        System.out.println("Number difference " + Minus.minus(randomNumberOne, randomNumberTwo));
+        if (randomNumberTwo == 0) { // use check null value
+            System.out.println("Second number should be not 0");
         } else {
-            System.out.println("Частное чисел " + Divide.divine(randomNumberOne, randomNumberTwo));
+            System.out.println("Quotient numbers " + Divide.divine(randomNumberOne, randomNumberTwo));
         }
-        System.out.println("Произведение чисел " + Multiply.multiply(randomNumberOne, randomNumberTwo));
-        System.out.println("Произведение чисел через сумму " + Multiply.multiplyFromSum(randomNumberOne, randomNumberTwo));
+        System.out.println("Multiply of numbers " + Multiply.multiply(randomNumberOne, randomNumberTwo));
+        System.out.println("Multiply of number way of adding numbers " + Multiply.multiplyFromSum(randomNumberOne, randomNumberTwo));
     }
 }
